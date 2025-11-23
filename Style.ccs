@@ -1,1 +1,119 @@
+body {
+    margin: 0;
+    background: #000;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    color: white;
+}
 
+.not-loaded * {
+    animation-play-state: paused !important;
+}
+
+.start-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.start-screen h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+#openBtn {
+    padding: 10px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #7b2fff;
+    color: #fff;
+}
+
+/* Fondo con estrellitas */
+.night {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background: radial-gradient(circle, #222, #000);
+    overflow: hidden;
+}
+
+/* ⭐ Animación de estrella */
+.night::before, .night::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    border-radius: 50%;
+    box-shadow:
+        10vw 20vh white, 40vw 10vh white, 60vw 80vh white,
+        80vw 40vh white, 20vw 70vh white, 30vw 50vh white,
+        70vw 20vh white, 90vw 60vh white, 50vw 90vh white;
+    animation: twinkle 3s infinite ease-in-out alternate;
+}
+
+@keyframes twinkle {
+    from { opacity: 0.3; }
+    to { opacity: 1; }
+}
+
+/* 🌸 FLORES MORADAS */
+.flowers {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%) scale(0.9);
+}
+
+.hidden {
+    display: none;
+}
+
+.flower {
+    position: absolute;
+    bottom: 10vw;
+    transform-origin: bottom center;
+}
+
+.flower--1 { left: -90px; }
+.flower--2 { left: 0px; }
+.flower--3 { left: 90px; }
+
+.flower_line {
+    width: 6px;
+    height: 70vw;
+    background: linear-gradient(#5e00ff, #b85bff);
+    margin: auto;
+    border-radius: 5px;
+}
+
+.flower_leafs {
+    position: absolute;
+    bottom: 70vw;
+    transform: translateX(-50%);
+    left: 50%;
+}
+
+.flower_leaf {
+    width: 60px;
+    height: 80px;
+    background: radial-gradient(circle, #cc9bff, #7b2fff);
+    border-radius: 100px 100px 0 0;
+    position: absolute;
+    animation: bloom 2s ease forwards;
+}
+
+.flower_leaf--1 { transform: rotate(-40deg) translate(-40px, 0); }
+.flower_leaf--2 { transform: rotate(-10deg) translate(-10px, -20px); }
+.flower_leaf--3 { transform: rotate(20deg) translate(20px, -20px); }
+.flower_leaf--4 { transform: rotate(50deg) translate(40px, 0); }
+
+@keyframes bloom {
+    0% { transform: scale(0) rotate(0deg); opacity: 0; }
+    100% { opacity: 1; }
+}
