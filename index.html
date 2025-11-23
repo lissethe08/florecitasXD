@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flores para ti</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
 
+<body class="not-loaded">
+    
+    <div class="start-screen">
+        <h1>Tengo algo para ti</h1>
+        <button id="openBtn">Abrir</button>
+    </div>
+
+    <!-- Fondo con estrellas -->
+    <div class="night"></div>
+
+    <!-- Flor morada animada -->
+    <div class="flowers hidden">
+        <div class="flower flower--1">
+            <div class="flower_leafs flower_leafs--1">
+                <div class="flower_leaf flower_leaf--1"></div>
+                <div class="flower_leaf flower_leaf--2"></div>
+                <div class="flower_leaf flower_leaf--3"></div>
+                <div class="flower_leaf flower_leaf--4"></div>
+            </div>
+            <div class="flower_line"></div>
+        </div>
+
+        <div class="flower flower--2">
+            <div class="flower_leafs flower_leafs--2">
+                <div class="flower_leaf flower_leaf--1"></div>
+                <div class="flower_leaf flower_leaf--2"></div>
+                <div class="flower_leaf flower_leaf--3"></div>
+                <div class="flower_leaf flower_leaf--4"></div>
+            </div>
+            <div class="flower_line"></div>
+        </div>
+
+        <div class="flower flower--3">
+            <div class="flower_leafs flower_leafs--3">
+                <div class="flower_leaf flower_leaf--1"></div>
+                <div class="flower_leaf flower_leaf--2"></div>
+                <div class="flower_leaf flower_leaf--3"></div>
+                <div class="flower_leaf flower_leaf--4"></div>
+            </div>
+            <div class="flower_line"></div>
+        </div>
+    </div>
+
+<script>
+document.getElementById("openBtn").addEventListener("click", () => {
+    document.querySelector(".start-screen").style.display = "none";
+    document.querySelector(".flowers").classList.remove("hidden");
+    document.body.classList.remove("not-loaded");
+});
+</script>
+
+</body>
+</html>
